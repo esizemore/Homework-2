@@ -1,0 +1,65 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Feb  5 19:24:39 2017
+
+@author: elizabethsizemore
+"""
+
+
+#distance in lightyears
+x=int(input("Enter the distance between a spaceship and another planet in lightyears:"))
+
+
+#distance converted to meters
+x2=9.461E15*x
+
+#velocities in m/s
+v=float(input("Enter the speed as a fraction of the speed of light:"))
+c=2.998E8
+v2=v*c
+
+
+gamma=1/((1-((v2**2)/(c**2)))**(.5))
+
+#time percieved by person on Earth
+t0=x2/(v2*3.154E7)
+print ('Time percieved by rest frame observer',t0, 'years')
+
+#time percieved by passenger
+t=t0/gamma
+print ('Time percieved by passenger',t, 'years')
+
+
+
+
+
+#Answers below
+
+#>>> runfile('/Users/elizabethsizemore/Documents/Computational_Physics/Sizemore_hw2_prob1', wdir='/Users/elizabethsizemore/Documents/Computational_Physics')
+#Enter the distance between a spaceship and another planet in lightyears:10
+#Enter the speed as a fraction of the speed of light:0.90
+#Time percieved by rest frame observer 11.117348388909265 years
+#Time percieved by passenger 4.84593981473902 years
+
+
+#>>> runfile('/Users/elizabethsizemore/Documents/Computational_Physics/Sizemore_hw2_prob1', wdir='/Users/elizabethsizemore/Documents/Computational_Physics')
+#Enter the distance between a spaceship and another planet in lightyears:10
+#Enter the speed as a fraction of the speed of light:0.98
+#Time percieved by rest frame observer 10.209809744916672 years
+#Time percieved by passenger 2.031726486288166 years
+
+
+#>>> runfile('/Users/elizabethsizemore/Documents/Computational_Physics/Sizemore_hw2_prob1', wdir='/Users/elizabethsizemore/Documents/Computational_Physics')
+#Enter the distance between a spaceship and another planet in lightyears:10
+#Enter the speed as a fraction of the speed of light:0.999
+#Time percieved by rest frame observer 10.015629179197536 years
+#Time percieved by passenger 0.44780056150314096 years
+#>>> 
+
+
+
+
+
+
+
